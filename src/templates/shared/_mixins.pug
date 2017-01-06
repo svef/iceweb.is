@@ -1,0 +1,6 @@
+
+mixin pagetitle(text, color = 'primary')
+  section.gray.pagetitle: grid.no-gutter: column
+    h1(class=`color-${color}`)
+      span=text
+      include /images/hexagon.svg
