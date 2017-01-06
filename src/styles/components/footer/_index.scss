@@ -20,6 +20,19 @@ footer {
 
   background: white;
 
+  opacity: 1;
+  transition: opacity 500ms ease 1s;
+
+  .loading & {
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+
+  p {
+    font-size: 18px;
+    color: $color-gray-lighter;
+  }
+
   > svg {
     position: absolute;
     top: 100%;

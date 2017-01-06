@@ -21,19 +21,22 @@ $color-red: #F05F5A;
 $color-green: #64D7D7;
 $color-yellow: #FFE164;
 $color-blue: #4AA2E2;
+$color-blue-dark: #2B7E99;
 
 $colorArray:
-  ('primary'    $color-primary)
-  ('red'    $color-red)
-  ('green'  $color-green)
-  ('yellow' $color-yellow)
-  ('blue'   $color-blue)
+  ('primary'    $color-primary    white)
+  ('red'        $color-red        white)
+  ('green'      $color-green      white)
+  ('yellow'     $color-yellow     white)
+  ('blue'       $color-blue       white)
+  ('blue-dark'  $color-blue-dark  white)
+  ('gray-dark'  $color-gray-dark  white)
 ;
 
 // Sizes
 $spacing: 20px;
 $page-max-width: 1440px;
-$page-min-width: 320px;
+$page-min-width: 1280px;
 
 $footer-height: 140px;
 $header-height: 180px;

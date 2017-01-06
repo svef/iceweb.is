@@ -88,7 +88,12 @@ header {
       text-align: right;
     }
 
-    a {
+    .button {
+      margin-left: $spacing;
+    }
+
+    .disabled,
+    a:not(.button) {
       overflow: hidden;
       position: relative;
 
@@ -96,7 +101,7 @@ header {
       padding: 0;
 
       display: block;
-      line-height: 32px;
+      line-height: 54px;
 
       font-size: 18px;
       text-decoration: none;
@@ -107,6 +112,11 @@ header {
       transition: opacity 750ms, transform 500ms;
       transition-delay: 1000ms;
 
+      &.disabled {
+        pointer-events: none;
+      }
+
+      &.disabled,
       &[href^="#"] {
         font-style: italic;
       }
@@ -139,6 +149,7 @@ header {
 
 
       @include respond-to(medium) {
+        vertical-align: middle;
         display: inline-block;
         margin: 0 $spacing;
 
