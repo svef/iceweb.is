@@ -1,6 +1,11 @@
 .item {
   margin-bottom: $spacing * 6;
 
+  &__image {
+    width: 179px;
+    height: 200px;
+  }
+
   &__image img {
     max-width: 100%;
   }
