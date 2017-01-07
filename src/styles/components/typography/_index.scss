@@ -222,7 +222,13 @@ a {
 @each $name, $color in $colorArray {
   .color-#{$name} {
     color: $color;
+    border-color: $color;
   }
+
+  li.color-#{$name}:before {
+    color: $color;
+  }
+
   h1, h2 {
     &.color-#{$name}:after {
       background-color: $color;

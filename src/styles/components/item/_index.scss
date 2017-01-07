@@ -1,0 +1,81 @@
+.item {
+  margin-bottom: $spacing * 6;
+
+  &__image img {
+    max-width: 100%;
+  }
+
+  &__num {
+    padding-right: 30px;
+    text-align: right;
+
+    span {
+      display: inline-block;
+
+      padding-bottom: 4px;
+
+      font-size: 32px;
+      line-height: 1;
+      font-weight: bold;
+
+      border-bottom-width: 4px;
+      border-bottom-style: solid;
+    }
+  }
+
+  &__title {
+    padding-top: 0;
+    padding-bottom: 20px;
+
+    font-size: 32px;
+    word-break: initial;
+
+    &:after {
+      content: none;
+    }
+  }
+
+  &__subtitle {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  &__content {
+    h3 {
+      padding-top: $spacing;
+      font-size: 22px;
+    }
+
+    p, li, blockquote {
+      font-size: $font-size;
+      font-weight: 400;
+      line-height: 1.875;
+
+      color: $color-font;
+    }
+
+    blockquote {
+      margin-left: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+    }
+
+    li {
+      padding-bottom: $spacing;
+    }
+
+    li:before {
+      content: '\2713';
+      position: absolute;
+      margin-left: -1.3em;
+      font-weight: bold;
+    }
+
+    .button {
+      margin-top: $spacing * 2;
+    }
+  }
+}

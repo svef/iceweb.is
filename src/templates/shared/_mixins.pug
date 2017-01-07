@@ -4,3 +4,23 @@ mixin pagetitle(text, color = 'primary')
     h1(class=`color-${color}`)
       span=text
       include /images/hexagon.svg
+
+mixin item(title, subtitle = '', image = '', color = 'primary', num = '')
+  .item
+    grid.no-gutter
+      column.large-up-offset-1.large-2
+        if image
+          .item__image
+            img(src=image, alt='')
+      column.large-1
+        if num
+          .item__num
+            span(class=`color-${color}`)= num
+      column.large-7
+        h2.item__title= title
+        if subtitle
+          p.item__subtitle= subtitle
+        .item__content
+          if block
+            block
+
