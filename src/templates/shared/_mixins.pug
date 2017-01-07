@@ -24,3 +24,16 @@ mixin item(title, subtitle = '', image = '', color = 'primary', num = '')
           if block
             block
 
+mixin schedule(heading)
+  .schedule
+    h3.schedule__heading= heading
+    block
+
+mixin scheduleItem(time, title, details = '')
+  .schedule__item
+    .schedule__time= time
+    .schedule__content
+      h4.schedule__title= title
+      if details
+        h5.schedule__details= details
+

@@ -3,4 +3,19 @@ extends /templates/shared/_layout
 block content
   +pagetitle('Schedule', 'blue')
 
-
+  grid
+    column.large-up-offset-2.large-6
+      +schedule('Schedule for the day')
+        +scheduleItem('08:30', 'Badge pickup, coffee & networking')
+        +scheduleItem('09:00', 'SVEF Chairman opens the conference')
+        +scheduleItem('09:15', 'Speaker 1', 'Harry Roberts')
+        +scheduleItem('10:15', 'Speaker 2', 'Birkir Gunnarsson')
+        +scheduleItem('10:45', 'Coffee', '')
+        +scheduleItem('11:00', 'Speaker 3', 'Vitaly Friedman')
+        +scheduleItem('12:00', 'Lunch break')
+        +scheduleItem('13:00', 'Speaker 4', 'Donna Lichaw')
+        +scheduleItem('14:30', 'Speaker 5', 'Steinar Farestveit')
+        +scheduleItem('15:00', 'Coffee')
+        +scheduleItem('15:15', 'Speaker 6', 'Paul Boag')
+        +scheduleItem('16:15', 'Networking & drinks')
+        +scheduleItem('17:00', 'Conference ends')
