@@ -109,7 +109,17 @@ body {
       background-position: center center;
     }
 
+    > img {
+      display: block;
+      margin: 0 auto $spacing;
+      max-width: 100%;
+    }
+
     .button {
+      margin-bottom: $spacing;
+    }
+
+    .button.padded {
       margin-top: $spacing * 2;
     }
   }
