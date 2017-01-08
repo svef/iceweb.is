@@ -84,9 +84,13 @@ h1, h2 {
 
     position: absolute;
     top: calc(100% - 8px);
-    right: 120px;
+    right: 10vw;
 
     transform: translate3d(0, -50%, 0);
+
+    @include respond-to(xxlarge) {
+      right: 120px;
+    }
 
     .hexagon {
       stroke: $color-primary;
@@ -124,7 +128,7 @@ h1 {
   }
 
   &:after {
-    transform: translate3d(122px, 0, 0);
+    transform: translate3d(10vw, 0, 0);
   }
 }
 
