@@ -18,7 +18,6 @@
     "lint": "eslint src",
     "test": "nyc ava",
     "test-dev": "supervisor --quiet --watch test,src/scripts --no-restart-on exit --exec npm -- run test --silent",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build": "gulp build"
   },
   "dependencies": {},
@@ -31,7 +30,6 @@
     "browser-sync": "^2.12.7",
     "browserify": "^13.0.1",
     "connect-history-api-fallback": "^1.2.0",
-    "coveralls": "^2.11.9",
     "es6-promise": "^3.2.1",
     "eslint": "^2.9.0",
     "eslint-config-icelandair": "^1.0.0",

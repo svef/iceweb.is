@@ -1,0 +1,38 @@
+.schedule {
+
+  &__heading {
+    padding-bottom: $spacing;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__content {
+    padding-bottom: $spacing;
+  }
+
+  &__time {
+    padding-right: $spacing;
+
+    font-size: 28px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  &__title {
+    padding-bottom: $spacing / 2;
+
+    font-size: 28px;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  &__details {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: normal;
+    font-style: italic;
+    color: $color-gray-light;
+  }
+}

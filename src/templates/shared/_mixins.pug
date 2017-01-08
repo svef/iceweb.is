@@ -4,3 +4,32 @@ mixin pagetitle(text, color = 'primary')
     h1(class=`color-${color}`)
       span=text
       include /images/hexagon.svg
+
+mixin item(title, subtitle = '', image = '', color = 'primary', num = '')
+  .item(class=`color-${color}`)
+    grid
+      column.large-3
+        if image
+          .item__image
+            img(src=image, alt='')
+      column.large-up-offset-1.large-6
+        h2.item__title= title
+        if subtitle
+          p.item__subtitle= subtitle
+        .item__content
+          if block
+            block
+
+mixin schedule(heading)
+  .schedule
+    h3.schedule__heading= heading
+    block
+
+mixin scheduleItem(time, title, details = '')
+  .schedule__item
+    .schedule__time= time
+    .schedule__content
+      h4.schedule__title= title
+      if details
+        h5.schedule__details= details
+
