@@ -33,7 +33,7 @@ main {
     opacity: 1;
     transition: opacity 500ms ease 1s;
 
-    grid {
+    > grid {
       text-align: left;
     }
 
