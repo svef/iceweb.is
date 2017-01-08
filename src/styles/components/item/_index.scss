@@ -65,7 +65,7 @@
 
     ul {
       list-style-type: none;
-      padding-left: 1em;
+      padding-left: $spacing*2;
     }
 
     li {
@@ -73,10 +73,16 @@
     }
 
     li:before {
-      content: '\2713';
+      content: '';
       position: absolute;
-      margin-left: -1.3em;
-      font-weight: bold;
+      margin-left: -$spacing*2;
+
+      width: 20px;
+      height: 1.35em;
+
+      background-image: url('/images/checkmark.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
     }
 
     .button {
