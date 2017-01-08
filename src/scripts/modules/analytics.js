@@ -1,9 +1,9 @@
 let injected = false
 
-export default (code) => {
+const init = (code) => {
   if (!code) {
     console.warn('Analytics: No UA code provided')
-    return () => {}
+    return
   }
 
   if (!injected) {
@@ -20,8 +20,12 @@ export default (code) => {
 
   window.ga('create', code, 'auto')
   window.ga('send', 'pageview')
-
-  return function (...args) {
-    window.ga.apply(this, args)
-  }
 }
+
+const fn = function (...args) {
+  window.ga.apply(this, args)
+}
+
+fn.init = init
+
+module.exports = fn

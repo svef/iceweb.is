@@ -3,16 +3,15 @@ import 'es6-promise'
 import 'whatwg-fetch'
 
 import analytics from './modules/analytics'
+analytics.init('UA-90006733-1')
+
 import domready from './modules/domready'
 import initRouter from './init/router'
 
 // Routes
-import indexRoute from './routes/index'
+import routes from './routes'
 
-analytics('UA-77889324-1')
-initRouter({
-  '/': indexRoute,
-})
+initRouter(routes)
 
 domready(() => {
   setTimeout(() => document.querySelector('html').classList.remove('loading'), 750)
