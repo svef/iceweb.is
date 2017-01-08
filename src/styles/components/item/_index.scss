@@ -116,6 +116,10 @@ body {
     }
 
     .button {
+      margin-bottom: $spacing;
+    }
+
+    .button.padded {
       margin-top: $spacing * 2;
     }
   }
