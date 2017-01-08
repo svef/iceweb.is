@@ -49,7 +49,7 @@ mixin scheduleSpeakerItem(time, speaker = {}, talk = {})
 
 mixin scheduleSpeakerItemSpeaker(speaker)
   span=speaker.name
-  if speaker.twitter
-    small: a(href=`https://twitter.com/${speaker.twitter}` target='_blank')=`@${speaker.twitter}`
   if speaker.website
     small: a(href=speaker.website target='_blank')=speaker.website.split('://').pop()
+  if speaker.twitter
+    small: a(href=`https://twitter.com/${speaker.twitter}` target='_blank')=`@${speaker.twitter}`

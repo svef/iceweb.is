@@ -5,7 +5,7 @@
   }
 
   &__item {
-    padding: $spacing;
+    padding: $spacing $spacing 0;
     display: flex;
 
     flex-direction: column;
@@ -66,16 +66,19 @@
   &__speaker,
   &__details {
 
+    span {
+      display: block;
+    }
+
     small {
       vertical-align: 3px;
       display: inline-block;
       font-size: 60%;
       font-style: italic;
-      margin-left: $spacing;
       color: $color-gray-light;
 
-      &:first-child {
-        margin-left: 0;
+      + small {
+        margin-left: $spacing;
       }
     }
   }
