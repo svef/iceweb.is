@@ -3,19 +3,104 @@ extends /templates/shared/_layout
 block content
   +pagetitle('Schedule', 'blue')
 
-  grid
-    column.large-up-offset-2.large-6
+  grid.no-gutter
+    column.large-up-offset-2.large-9.xxlarge-6
       +schedule('Schedule for the day')
         +scheduleItem('08:30', 'Badge pickup, coffee & networking')
-        +scheduleItem('09:00', 'SVEF Chairman opens the conference')
-        +scheduleItem('09:15', 'Speaker 1', 'Harry Roberts')
-        +scheduleItem('10:15', 'Speaker 2', 'Birkir Gunnarsson')
+
+        +scheduleSpeakerItem(
+          '09:00',
+          {
+            name: 'Markús M. Þorgeirsson',
+          },
+          {
+            title: 'SVEF Chairman opens the conference',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '09:15',
+          {
+            name: 'Harry Roberts',
+            website: 'http://csswizardry.com',
+            twitter: 'csswizardry',
+          },
+          {
+            title: 'Refactoring CSS Without Losing Your Mind',
+            description: 'Working with CSS is tricky enough as it is; working with legacy CSS can be nightmarish. In this talk, we’ll look at how we decide what to refactor and when; how we can refactor code whilst still shipping features; how to avoid regressions when adding new CSS; how we can avoid the dreaded refactoring tunnels; running new and legacy code in tandem; and a bunch of other neat little tips and tricks.',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '10:15',
+          {
+            name: 'Birkir Gunnarsson',
+            website: 'http://bbt.com',
+            twitter: 'birkir_gun',
+          },
+          {
+            title: '',
+            description: '',
+          }
+        )
+
         +scheduleItem('10:45', 'Coffee', '')
-        +scheduleItem('11:00', 'Speaker 3', 'Vitaly Friedman')
+
+        +scheduleSpeakerItem(
+          '11:00',
+          {
+            name: 'Vitaly Friedman',
+            website: 'http://smashingmagazine.com',
+            twitter: 'smashingmag',
+          },
+          {
+            title: '',
+            description: '',
+          }
+        )
+
         +scheduleItem('12:00', 'Lunch break')
-        +scheduleItem('13:00', 'Speaker 4', 'Donna Lichaw')
-        +scheduleItem('14:30', 'Speaker 5', 'Steinar Farestveit')
+
+        +scheduleSpeakerItem(
+          '13:00',
+          {
+            name: 'Donna Lichaw',
+            website: 'http://donnalichaw.com',
+            twitter: 'dlichaw',
+          },
+          {
+            title: 'Story First: Crafting Products That Engage ',
+            description: 'While many of us seek out the newest and shiniest tools, methods, and processes to build more successful products and services, we often overlook one of the oldest, leanest, most effective tools out there: the structurally sound story. Whether you realize it or not in the moment, you experience everything as if it was a story. The better the story, the more likely you are to want to use a product, continue to use it, pay to use it, and recommend it to others. In this talk, you will see how taking a story first approach to product design and development will help you build more successful websites, apps, campaigns, and services that excite your customers, draw them in, incite them to action, and keep them engaged over time.',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '14:30',
+          {
+            name: 'Steinar Ingi Farestveit',
+            website: 'http://steifar.com',
+            twitter: 'steifar',
+          },
+          {
+            title: 'Prototyping = Better product',
+            description: '',
+          }
+        )
+
         +scheduleItem('15:00', 'Coffee')
-        +scheduleItem('15:15', 'Speaker 6', 'Paul Boag')
+
+        +scheduleSpeakerItem(
+          '15:15',
+          {
+            name: 'Paul Boag',
+            website: 'http://boagworld.com',
+            twitter: 'boagworld',
+          },
+          {
+            title: 'User Experience Revolution',
+            description: 'Do you feel like the only person at your company who understands what a huge competitive advantage a good user experience provides? Are you frustrated that your management team doesn’t see the value of creating great user experiences? Do you struggle to convince colleagues to approach projects from a users perspective?Many companies try to create a great experience for customers. But few are willing to make the changes required to deliver on that promise. In fact most don’t even realise just how bad their experience can be. This talk shows you how to bring about change in your organisation. You don’t need to have power, position or influence to make a difference. It won’t be easy or quick, but you can start a revolution in your place of work. A revolution that will help to reshape the company into one capable of offering outstanding service. All you need is some determination and a willingness to challenge the status quo.',
+          }
+        )
+
         +scheduleItem('16:15', 'Networking & drinks')
         +scheduleItem('17:00', 'Conference ends')
