@@ -29,7 +29,27 @@ mixin scheduleItem(time, title, details = '')
   .schedule__item
     .schedule__time= time
     .schedule__content
-      h4.schedule__title= title
+      h4.schedule__title.italic= title
       if details
         h5.schedule__details= details
 
+mixin scheduleSpeakerItem(time, speaker = {}, talk = {})
+  .schedule__item
+    .schedule__time.bold= time
+    .schedule__content
+      if talk.title
+        h4.schedule__title= talk.title
+        h5.schedule__speaker
+          +scheduleSpeakerItemSpeaker(speaker)
+      else
+        h4.schedule__title
+          +scheduleSpeakerItemSpeaker(speaker)
+      if talk.description
+        p.schedule__description= talk.description
+
+mixin scheduleSpeakerItemSpeaker(speaker)
+  span=speaker.name
+  if speaker.twitter
+    small: a(href=`https://twitter.com/${speaker.twitter}` target='_blank')=`@${speaker.twitter}`
+  if speaker.website
+    small: a(href=speaker.website target='_blank')=speaker.website.split('://').pop()
