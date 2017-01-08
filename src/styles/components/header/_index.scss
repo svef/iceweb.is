@@ -5,11 +5,13 @@ header {
 
   display: block;
   margin: 0 auto;
-  padding: 90px 0 50px;
+  padding: 140px 0 0px;
 
   background: #fff;
 
-  @include respond-to(medium) {
+  @include respond-to(large) {
+    padding-top: 90px;
+    padding-bottom: 50px;
     height: $header-height;
   }
 
@@ -27,13 +29,15 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    top: 15px;
     z-index: 3;
 
     margin: auto;
     width: 100px;
 
     @include respond-to(large) {
+      top: auto;
+      bottom: 15px;
       width: 100px;
     }
 
@@ -74,22 +78,66 @@ header {
     bottom: 0;
     z-index: 2;
 
-    padding-right: 120px;
+    padding: 0 $spacing;
 
     opacity: 1;
     transition: opacity 500ms ease 500ms;
 
-    &.left {
-      padding-left: 120px;
-    }
+    text-align: center;
 
     &.right {
-      padding-right: 120px;
-      text-align: right;
+      display: none;
+    }
+
+    .hide-on-large {
+      display: inline-block;
+      @include respond-to(large) {
+        display: none !important;
+      }
+    }
+
+    @include respond-to(large) {
+      &.left {
+        padding-right: 0;
+        text-align: left;
+      }
+      &.right {
+        display: block;
+        padding-left: 0;
+        text-align: right;
+      }
+    }
+    @include respond-to(xlarge) {
+      &.left {
+        padding-left: 100px;
+      }
+
+      &.right {
+        padding-right: 100px;
+      }
+    }
+
+    @include respond-to(xxlarge) {
+      &.left {
+        padding-left: 120px;
+      }
+
+      &.right {
+        padding-right: 120px;
+      }
     }
 
     .button {
-      margin-left: $spacing;
+      margin: 0 auto;
+      display: block;
+      max-width: 200px;
+      @include respond-to(medium) {
+        // display: inline-block;
+      }
+      @include respond-to(large) {
+        display: inline-block;
+        margin-left: $spacing;
+      }
     }
 
     .disabled,
@@ -97,10 +145,11 @@ header {
       overflow: hidden;
       position: relative;
 
-      margin: 0 0 0 $spacing/2;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 $spacing/2;
       padding: 0;
 
-      display: block;
       line-height: 54px;
 
       font-size: 18px;
@@ -121,21 +170,29 @@ header {
         font-style: italic;
       }
 
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
       &:after {
         content: '';
 
         position: absolute;
-        top: 0;
         left: 0;
+        right: 0;
         bottom: 0;
 
         display: block;
         width: 0px;
-        height: auto;
+        height: 2px;
 
         background: $color-gray-dark;
 
-        transform: translate3d(0,0,0);
+        transform: translate3d(0,100%,0);
         transition: transform 150ms, width 150ms;
       }
 
@@ -143,40 +200,14 @@ header {
       &:hover {
         color: $color-gray-dark;
         &:after {
-          width: 4px;
+          width: 100%;
+          transform: translate3d(0,0,0);
         }
       }
 
-
-      @include respond-to(medium) {
-        vertical-align: middle;
-        display: inline-block;
+      @include respond-to(large) {}
+      @include respond-to(xxlarge) {
         margin: 0 $spacing;
-
-        &:first-child {
-          margin-left: 0;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &:after {
-          top: auto;
-          right: 0;
-
-          width: 0;
-          height: 2px;
-
-          transform: translate3d(0,100%,0);
-        }
-
-        &.active,
-        &:hover {
-          &:after {
-            width: 100%;
-            transform: translate3d(0,0,0);
-          }
-        }
       }
     }
 
