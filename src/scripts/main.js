@@ -9,11 +9,9 @@ import domready from './modules/domready'
 import initRouter from './init/router'
 
 // Routes
-import indexRoute from './routes/index'
+import routes from './routes'
 
-initRouter({
-  '/': indexRoute,
-})
+initRouter(routes)
 
 domready(() => {
   setTimeout(() => document.querySelector('html').classList.remove('loading'), 750)
