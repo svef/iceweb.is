@@ -36,7 +36,7 @@ html, body {
 h1, h2 {
   position: relative;
   margin: 0;
-  padding: 75px 10% 100px 0;
+  padding: 75px 20% 100px 0;
 
   font-weight: 700;
   line-height: 1em;
@@ -124,7 +124,7 @@ h1 {
   @include respond-to(large) {
     font-size: 300px;
 
-    min-height: 600px;
+    min-height: 775px;
   }
 
   &:after {
