@@ -43,7 +43,10 @@ section.gray {
 
 section.fphero {
   overflow: hidden;
-  min-height: 800px;
+
+  @include respond-to(large) {
+    min-height: 800px;
+  }
 
   h1 {
     position: absolute;

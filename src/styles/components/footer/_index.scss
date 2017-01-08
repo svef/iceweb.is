@@ -29,8 +29,20 @@ footer {
   }
 
   p {
+    padding-top: $spacing;
     font-size: 18px;
     color: $color-gray-lighter;
+
+    text-align: center;
+
+    @include respond-to(large) {
+      text-align: left;
+    }
+  }
+
+  > grid {
+    position: relative;
+    z-index: 1;
   }
 
   > svg {
@@ -38,6 +50,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
+    z-index: 0;
 
     margin: auto;
     width: 350px;
