@@ -45,7 +45,7 @@ mixin scheduleSpeakerItem(time, speaker = {}, talk = {})
         h4.schedule__title
           +scheduleSpeakerItemSpeaker(speaker)
       if talk.description
-        p.schedule__description= talk.description
+        p.schedule__description!= talk.description
 
 mixin scheduleSpeakerItemSpeaker(speaker)
   span=speaker.name
