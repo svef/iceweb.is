@@ -3,6 +3,11 @@ extends /templates/shared/_layout
 block content
   +pagetitle('Schedule', 'blue')
 
+  section.splitsection
+    grid
+      column.text-center
+        p The conference will be held at Harpa on the 27th of January
+
   grid.no-gutter
     column.large-up-offset-2.large-9.xxlarge-6
       +schedule('Schedule for the day')

@@ -8,6 +8,19 @@ section {
   &.cta {
     padding: 100px 0 50px;
   }
+
+  &.splitsection {
+    margin: 0 auto $spacing*3;
+    padding: $spacing*2 $spacing $spacing;
+  }
+
+  p, li, blockquote {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+
+    color: $color-gray;
+  }
 }
 
 section.gray {
