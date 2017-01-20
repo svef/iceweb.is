@@ -31,7 +31,7 @@ mixin scheduleItem(time, title, details = '')
     .schedule__content
       h4.schedule__title.italic= title
       if details
-        h5.schedule__details= details
+        h5.schedule__details!= details
 
 mixin scheduleSpeakerItem(time, speaker = {}, talk = {})
   .schedule__item
