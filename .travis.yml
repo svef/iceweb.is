@@ -23,7 +23,7 @@ deploy:
   access_key_id: GOOGEUJBQSCEOELPGXAN
   secret_access_key:
     secure: k3iOH8uOroiwJNpkKv7dzVdEYPvl8qwZImSw0yjRyBLWeDxlzg8DH+mcMWlKs7bNPoboFkBdbkJqGIlqxwFEGHF5bCd65L7KrW3HgKPTSwBHRn6b3/o10hV3833+xGUEZtXXw8qYPH5gFqNHJ+Yp0zyRihm0++ukdZ9hQ7G/+8aFAW2ixkqYMMlmu6tBxHp/oY+TgCXoq9kd6gWIOoFsBP4xpMJxoNn7TVjZ6mpXVMH/tFPPlYAAqgR1JA17hTdREs0dKHpqxm8iBxNUjcbGMGzM0GhXhSmqRPW2wnoL3bZr3/bbJ4g7DVoQh0kIQtX0c5n+ypRaDYaePQp3pRNmjgRS8KmmQdlkBWFsf3MmnbYaL03MtjIh9nIlA4+KcUCbvjz0f/kg5frSUX38V87o1fagIOkGm1VtxOqTCcd2zjVY3hznZdsnOjGq/9ultp5Ks7G+h+K9YAtXWkcMSbCIcmnRUPaFWgfBa/WTtMj9UXUk7JfhsWwpp3mAeZ5qrDIx1a7ATuPPeMjD5G8hc0Ca3yIyNt+qCoIu3UC/rUf9yBQV6NiTjTxnUYJxO+71RJC+OSqiSQ5CBW/YkfJUhz9kkY0BMWc73eRqlxzjxAxemtfA68G6zol2hCctGP4K3RmWzvW6tjjyBDtUUMx884XoJTp/wedQENVb6ZjE764z9YU=
-  bucket: 2017.iceweb.is
+  bucket: 2018.iceweb.is
   skip_cleanup: true
   local-dir: dist
   acl: public-read
