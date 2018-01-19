@@ -29,7 +29,7 @@ mixin scheduleItem(time, title, details = '')
   .schedule__item
     .schedule__time= time
     .schedule__content
-      h4.schedule__title.italic= title
+      h4.schedule__title.italic!= title
       if details
         h5.schedule__details!= details
 
@@ -49,6 +49,8 @@ mixin scheduleSpeakerItem(time, speaker = {}, talk = {})
 
 mixin scheduleSpeakerItemSpeaker(speaker)
   span=speaker.name
+  if speaker.title
+    h6.schedule__speaker-title=speaker.title
   if speaker.website
     small: a(href=speaker.website target='_blank')=speaker.website.split('://').pop()
   if speaker.twitter

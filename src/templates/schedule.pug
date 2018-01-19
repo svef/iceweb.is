@@ -1,111 +1,132 @@
 extends /templates/shared/_layout
 
 block content
-  +pagetitle('Schedule', 'blue')
-
-  section.splitsection
-    grid
-      column.text-center
-        p The conference will be held at Harpa on the 27th of January
+  +pagetitle('Dagskrá', 'blue')
 
   grid.no-gutter
     column.large-up-offset-2.large-9.xxlarge-6
-      +schedule('Schedule for the day')
-        +scheduleItem('08:30', 'Badge pickup, coffee & networking')
+      +schedule('Dagskrá fyrir daginn')
+        +scheduleItem('13:00', 'Skráning hefst')
 
         +scheduleSpeakerItem(
-          '09:00',
+          '13:15',
           {
-            name: 'Markús M. Þorgeirsson',
+            name: 'Einar Þór Gústafsson',
+            title: 'Stofnandi Getlocal',
           },
           {
-            title: 'SVEF Chairman opens the conference',
+            title: 'Fundarstjóri setur ráðstefnuna',
+            description: 'Einar hefur verið í vefbransanum í hátt í 20 ár, var meðal stofnanda SVEF og fyrrum formaður, einnig var hann upphafsmaður IceWeb ráðstefnunnar. Einar hefur stýrt vefþróun og hönnun hjá fyrirtækjum á borð við Meniga og Íslandsbanka en í dag stýrir hann Getlocal, sprotafyrirtæki sem hann stofnaði fyrir rúmu ári síðan.'
           }
         )
 
         +scheduleSpeakerItem(
-          '09:15',
+          '13:20',
           {
-            name: 'Harry Roberts',
-            website: 'http://csswizardry.com',
-            twitter: 'csswizardry',
+            name: 'Berglind Ósk Bergsdóttir',
+            title: 'Tölvunarfræðingur og sérfræðingur í farsíma- og framendaforritun hjá Kolibri',
           },
           {
-            title: 'Refactoring CSS Without Losing Your Mind',
-            description: 'Working with CSS is tricky enough as it is; working with legacy CSS can be nightmarish. In this talk, we’ll look at how we decide what to refactor and when; how we can refactor code whilst still shipping features; how to avoid regressions when adding new CSS; how we can avoid the dreaded refactoring tunnels; running new and legacy code in tandem; and a bunch of other neat little tips and tricks.',
+            title: 'Að byggja upp traust og vellíðan á vinnustað',
+            description: 'Meðvitundin um mikilvægi heilbrigðrar vinnustaðamenningu er sífellt að aukast. Þegar fólk getur talað opinskátt og heiðarlega í traustu og stuðningsríku umhverfi er það ástríðufyllra fyrir því sem það gerir og getur gefið af sér á sjálfbæran hátt. En hvað getum við gert til að bæta vinnustaðamenningu okkar í hugbúnaðarþróun? Berglind hefur undanfarið ár ferðast um allan heim með fyrirlestur um blekkingarupplifun (e. impostor experience/syndrome) og mun tala um reynslu sína og hvað sé hægt að gera til að byggja upp heilbrigðan vinnukúltúr, fyrir þá sem þjást af blekkingaupplifun sem og aðra.'
           }
         )
 
         +scheduleSpeakerItem(
-          '10:15',
+          '13:40',
           {
-            name: 'Birkir Gunnarsson',
-            website: 'http://bbt.com',
-            twitter: 'birkir_gun',
+            name: 'Guðný Þ. Magnúsdóttir',
+            title: 'Vefráðgjafi og aðgengissérfræðingur hjá Origo',
           },
           {
-            title: 'Accessibility - the ultimate UX',
-            description: 'Accessibility is not just about complying with legislative requirements in the USA, canada and the EU.<br>It\'s not just about reaching out to another 20% of the population.<br>It\'s not just about ensuring better compatibility on more screen sizes and more devices.<br>Accessibility is smart UI design, backed by solid code, that enables all users to understan and interact with your website.<br>Come find out why accessibility is the ultimate UX.',
-          }
-        )
-
-        +scheduleItem('11:00', 'Coffee', '')
-
-        +scheduleSpeakerItem(
-          '11:30',
-          {
-            name: 'Vitaly Friedman',
-            website: 'http://smashingmagazine.com',
-            twitter: 'smashingmag',
-          },
-          {
-            title: 'Dirty Little Tricks From The Dark Corners of Front-End',
-            description: 'Do you love the &lt;object&gt; tag, too? How do you feel about perfectly responsive typographic scale and vertical rhythm? Do you feel itchy when it comes to building responsive email layouts? Have you ever tried to work around complex tables, nasty carousels, endless country selectors and complex user interfaces? Well, let’s bring it on!<br><br>In this talk, Vitaly Friedman, editor-in-chief of Smashing Magazine, will present dirty practical techniques and clever ideas developed in actual real-life projects, and use many examples to illustrate how we can solve problems smarter and faster. Please take the techniques with a grain of salt. Beware: you will not be able to unlearn what you’ll learn in the session!',
-          }
-        )
-
-        +scheduleItem('12:30', 'Lunch break')
-
-        +scheduleSpeakerItem(
-          '13:30',
-          {
-            name: 'Donna Lichaw',
-            website: 'http://donnalichaw.com',
-            twitter: 'dlichaw',
-          },
-          {
-            title: 'Story First: Crafting Products That Engage ',
-            description: 'While many of us seek out the newest and shiniest tools, methods, and processes to build more successful products and services, we often overlook one of the oldest, leanest, most effective tools out there: the structurally sound story. Whether you realize it or not in the moment, you experience everything as if it was a story. The better the story, the more likely you are to want to use a product, continue to use it, pay to use it, and recommend it to others. In this talk, you will see how taking a story first approach to product design and development will help you build more successful websites, apps, campaigns, and services that excite your customers, draw them in, incite them to action, and keep them engaged over time.',
+            title: 'EAA – Ný Evrópulöggjöf um aðgengi á netinu',
+            description: 'Evrópusambandið hefur tekið í gildi lög um bætt aðgengi, European Accessibility Act. EAA snýr meðal annars að aðgengi á netinu, og gerir kröfur um að opinberir vefir, og aðrir vefir sem þjóna almenningi, standist kröfur um aðgengi. Hvaða áhrif hefur löggjöfin hérlendis og hvað er hægt að gera til að vera undirbúin og tryggja það að kröfum sé mætt?',
           }
         )
 
         +scheduleSpeakerItem(
-          '14:30',
+          '14:00',
           {
-            name: 'Steinar Ingi Farestveit',
-            website: 'http://steifar.com',
-            twitter: 'steifar',
+            name: 'Hrafn Ingvarsson',
+            title: 'Executive product manager hjá Novomatic',
           },
           {
-            title: 'Prototyping = Better product',
-            description: 'Whether it\'s creating websites, mobile apps, software, or any other interactive product, new prototyping tools and methods have made a positive impact to designers and their teams. But what is prototyping exactly? And what are the benefits of making it a part of the product design and building process?',
+            title: 'Huglægt mat í Hugbúnaðarþróun',
           }
         )
-
-        +scheduleItem('15:15', 'Coffee')
 
         +scheduleSpeakerItem(
-          '15:45',
+          '14:20',
           {
-            name: 'Paul Boag',
-            website: 'http://boagworld.com',
-            twitter: 'boagworld',
+            name: 'Arnar Gísli Hinriksson',
+            title: 'Performance Marketing Specialist hjá CCP',
           },
           {
-            title: 'User Experience Revolution',
-            description: 'Do you feel like the only person at your company who understands what a huge competitive advantage a good user experience provides? Are you frustrated that your management team doesn’t see the value of creating great user experiences? Do you struggle to convince colleagues to approach projects from a users perspective?Many companies try to create a great experience for customers. But few are willing to make the changes required to deliver on that promise. In fact most don’t even realise just how bad their experience can be. This talk shows you how to bring about change in your organisation. You don’t need to have power, position or influence to make a difference. It won’t be easy or quick, but you can start a revolution in your place of work. A revolution that will help to reshape the company into one capable of offering outstanding service. All you need is some determination and a willingness to challenge the status quo.',
+            title: 'Er vefurinn þinn uppvakningur?',
+            description: 'Uppvakningar finnast ekki bara í lotuáhorfum á Netflix. Þeir finnast nefnilega líka á netinu. Stór hluti vefja reika um stefnu- og markmiðalausir, óuppfærðir og ógeðfelldir. Erindið fjallar um vopnabúr eftirlifenda, mótefni við stökkbreytingu og hvernig endurlífga megi dauða vefi.',
           }
         )
 
-        +scheduleItem('16:45', 'Networking, drinks & food')
-        +scheduleItem('17:30', 'Conference ends', 'House opens for the <a href="https://www.vefverdlaun.is/">Icelandic Web Awards</a>')
+        +scheduleItem('14:40', 'Kaffihlé', '')
+
+        +scheduleSpeakerItem(
+          '15:00',
+          {
+            name: 'Valgerður Halldórsdóttir',
+            title: 'Meðstofnandi sprotafyrirtækisins Visku',
+          },
+          {
+            title: 'Verðmætasta auðlind heims er ekki lengur olía, heldur gögn',
+            description: 'Erindið fjallar um hvernig gögn eru að éta heiminn og hvernig þú getur nýtt þér það',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '15:20',
+          {
+            name: 'Andri Kristinsson',
+            title: 'Ráðgjafi hjá Hugsmiðjunni',
+          },
+          {
+            title: 'Er stafræn hagsæld á Íslandi?',
+            description: 'Þróunin í stafræna heiminum hefur verið hröð undanfarin ár. Samfélagsmiðlar, snjallsímar og leitarvélar eru meðal þeirra tækninýjunga sem hafa haft mikil áhrif á hvernig notendur nálgast vöru og þjónustu fyrirtækja. Notendur eru duglegir að tileinka sér nýja tækni en hvernig hafa íslensku fyrirtækin brugðist við henni?',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '15:40',
+          {
+            name: 'Ólafur Páll Einarsson',
+            title: 'Framkvæmdastjóri iSign',
+          },
+          {
+            title: 'Hlutverk rafrænna undirskrifta í þjónustum framtíðarinnar',
+            description: 'Meðhöndlun skjala á rafrænu formi hefur í fjölda ára verið nauðsynleg forsenda fyrir skilvirkum rekstri fyrirtækja. Í dag er notkun rafrænna skilríkja að verða nýr mælikvarði fyrir fyrirtæki með skilvirkan rekstur og vilja auka samkeppnishæfni með því að veita betri rafræna þjónustu til sinna viðskiptavina. Þægindi og einfaldleiki spila lykilhlutverk fyrir tækni sem nýr markaður er enn að læra að tileinka sér. Þjónustuveitendur verða að aðlagast vaxandi kröfum neytenda um aukið aðgengi að þjónustu hvar og hvenær sem er á þægilegri, einfaldari og hraðari hátt. Á sama tíma er nauðsynlegt að lausnirnar uppfylli nýjar kröfur laga og reglugerða um persónuvernd, öryggi og rétta útfærslu rafrænna undirskrifta. Rafrænar undirskriftir eru hagnýtt verkfæri í vopnabúr lausnahönnuða sem nýta má til útbúa snjallari og öfluggri þjónustur framtíðarinnar.',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '16:00',
+          {
+            name: 'Guðmundur Guðnason',
+            title: 'Forstöðumaður stafrænnar þróunar hjá Icelandair',
+          },
+          {
+            title: 'Stafræn framtíð Icelandair',
+            description: 'Í erindinu mun Guðmundur fjalla um hvernig Icelandair hefur gert breytingar til að styðja við sína stafrænu framtíð. Nýsköpun og stafræn þróun er gerð með það markmið að veita framúrskarandi og persónulega þjónustu. Með aukinni áherslu á sjálfsafgreiðslu næst bæði betri upplifun viðskiptavina og aukinn sparnaður.',
+          }
+        )
+
+        +scheduleSpeakerItem(
+          '16:20',
+          {
+            name: 'Rósa Stefánsdóttir',
+            title: 'Stofnandi og ráðgjafi, Vínber',
+          },
+          {
+            title: 'Framtíð smásölu er á vefnum',
+          }
+        )
+
+        +scheduleItem('16:40', 'Ráðstefnu slitið')
+        +scheduleItem('17:30', 'Húsið opnar fyrir <a href="https://www.vefverdlaun.is/">íslensku vefverðlaunin</a>')
