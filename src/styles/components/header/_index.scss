@@ -91,6 +91,7 @@ header {
 
     .hide-on-large {
       display: inline-block;
+      margin-top: $spacing !important;
       @include respond-to(large) {
         display: none !important;
       }
